@@ -1,229 +1,453 @@
-<html lang="zh-CN" prefix="og: http://ogp.me/ns#"><head>
-
-    <meta charset="utf-8">
-
-  <meta name="viewport" content="initial-scale=0.9, maximum-scale=1.0, minimum-scale=0.9, user-scalable=0, width=device-width">
-    
-
-    <meta itemprop="name" content="zr.lc">
-
- 
-<meta itemprop="image" content="http://q2.qlogo.cn/headimg_dl?dst_uin=2471717907&spec=5" />
-<meta name="description" itemprop="description" content="向日葵在没有太阳的晚上，还有谁向它伸出手。" />
- 
-
-   
-	<meta name="keywords" content="">
-	
-	<meta name="description" content=""眷你眉目，如我眼瞳"">
-    <title>星染 主页</title>
- 
-    <meta property="og:type" content="website">
-
-    <meta property="og:url" content="">
-
-    <meta property="og:image" content="./favicon.ico">
-
-    <meta property="og:title" content="">
-
-    <meta property="og:description" content="星染">
-
-    <link rel="canonical" href="">
-
-    <link rel="shortcut icon" href="./favicon.ico">
-
-    <link rel="bookmark" href="./favicon.ico">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="http://q2.qlogo.cn/headimg_dl?dst_uin=2471717907&spec=4">
-    <link rel="stylesheet" href="./style.css" media="screen" type="text/css">
-    <script src="./script.js" type="text/javascript"></script>
-
-    
-    
-
-   
-
-       <script>
-
-var _hmt = _hmt || [];
-
-(function() {
-
-  var hm = document.createElement("script");
-
-  hm.src = "https://hm.baidu.com/hm.js?f75c3ef9e6d273c4e363bb2592baa395";
-
-  var s = document.getElementsByTagName("script")[0]; 
-
-  s.parentNode.insertBefore(hm, s);
-
-})();
-
+<!DOCTYPE html>
+<html lang="en">
+<!-- 网站实时显示运行天数 -->
+<script type="text/javascript">
+    function show_site_runtime() {
+        window.setTimeout("show_site_runtime()", 1000); // 每秒运行一次函数
+        X = new Date("10/01/2021 12:00:00"); //在这里修改你的建站时间,月/日/年 时/分/秒
+        Y = new Date();
+        T = (Y.getTime() - X.getTime()); // 获取当前时间与指定时间之间的时间间隔（ms）	
+        i = 24 * 60 * 60 * 1000;
+        d = T / i;
+        D = Math.floor(d); // 计算天数并向下取整
+        h = (d - D) * 24;
+        H = Math.floor(h); // 计算剩余不足一天的小时数并向下取整
+        m = (h - H) * 60;
+        M = Math.floor(m); // 计算剩余不足一小时的分钟数并向下取整
+        s = (m - M) * 60
+        S = Math.floor(s); // 计算剩余不足一分钟的秒数并向下取整
+        site_runtime.innerHTML = D + " 天 " + H + " 小时 " + M + " 分 " + S + " 秒 "
+    }
+    show_site_runtime();
 </script>
 
-   <style>
-        .zuobiao i {
-            line-height: 1.8;
-            margin-right: 6px;
-            vertical-align: middle;
-            background-image: url(./zuobiao.svg);
-            background-size: 100%;
-            width: 16px;
-            height: 16px;
-            display: inline-block;
-            margin-top: -2px;
-        }
-       
-    </style>
-    <style>
-     .user-warp img {
-            width:70px;
-            border-radius:100%;
-        }
-      </style>
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="anle">
+    <meta name="template" content="anle">
+    <meta name="fragment" content="!">
+    <meta name="description" content>
+    <meta name="keywords" content>
+<link rel="stylesheet" href="https://cdn.gmit.vip/FontAwesome/css/font-awesome.min.css" type="text/css" media="all" />
+    <title>星染</title>
+    <link rel="icon" href="https://i.coldxuan.com/favicon.ico">
+    <!-- loading样式 -->
+    <link rel="stylesheet" href="css/loading.css">
+    <!-- 页面核心样式 -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link href="pmd.css" rel="stylesheet">
+    <!--页面小部件集成-->
+    <script src="js/tool.js"></script>
+    <!-- 页面核心JavaScript -->
+    <script src="src/js/jquery.min.js"></script>
+    <script src="https://cdn.gmit.vip/var/libs/jquery/jquery/dist/jquery.js"></script>
+    <script src="https://cdn.gmit.vip/sweetalert/sweetalert/sweetalert.min.js"></script>
+    <script src="https://cdn.gmit.vip/blog/js/typed.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/script.js"></script>
+    <script src="js/tocbot.min.js"></script>
+    <script type="text/javascript" src="https://cdn.gmit.vip/website/api/js/bideo.js"></script>
+    <script src="https://cdn.gmit.vip/layer/3.1.1/layer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.gmit.vip/blog/New/js/eye.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/lengxuan/cdnjs%40v1.1/anime.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/lengxuan/cdnjs%40v1.1/fireworks.js"></script>
+    <script type="text/javascript" src="https://cdn.gmit.vip/website/index/js/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.gmit.vip/website/index/js/ping.min.js"></script>
+    <script src="https://cdn.gmit.vip/blog/New/js/eye.js"></script>
+    <script src="https://cdn.gmit.vip/APlayer/dist/APlayer.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.gmit.vip/blog/js/typed.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.gmit.vip/layer/3.1.1/layer.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="https://cdn.gmit.vip/website/api/js/bideo.js"></script>
 </head>
+<!--顶部彩虹进度条-->
+<div class="colorTopBar"></div>
 
 <body>
-	 
-<div class="wrapper">
-<header>
-    <nav class="navbar" id="mobile-toggle-theme">
-        <div class="container"></div>
-    </nav>
-</header> 
-
-    <div class="main">
-
-        <div class="container">
-            <div class="intro" style=" line-height: 50px">
-                <div class="user-warp img"><img src="http://q2.qlogo.cn/headimg_dl?dst_uin=2471717907&spec=5" alt="星染"></div>
-                <div class="nickname">星染</div>
-                <div class="description">
-                    <p>“眷你眉目，如我眼瞳”</p>
-
-                </div>
-
-
-                <div class="zuobiao">
-                    <i class="ico_map"></i>中国 · 江苏
-                    <span style="margin-left: 30px">
-                            <input id="switch_default" type="checkbox" class="switch_default">
-                            <label for="switch_default" class="toggleBtn"></label></span>
-                </div>
-
-
-                
-                <div class="menu navbar-right links">
-
-                    <!-- 获取页面列表 -->
-
-                    <a class="menu-item" href="">
-                    资源站</a> · 
-
-                       <a href="https://v.douyin.com/dFG4NS7/">
-
-                      抖音                        
-                    </a> · 
-                  
-
-                    <a href="https://jhxnb.lanzoui.com/b0am2z13e">
-
-                      蓝奏网盘                     
-                    </a> · 
-
-
-                    <a href="https://qm.qq.com/cgi-bin/qm/qr?k=SMLPvQb7AzGY8s0b81s7eId6_p47Xz2W&noverify=0">
-
-                      QQ                       
-                    </a> · 
-
-                    
-                    <a href="">
-
-                      邮箱                        
-                    </a> · 
-
-                    
-                    <a class="menu-item" href="">
-                    云解析                        
-                    </a>
-    <!------------------------------------------------------------------------------------------->      
-<center>
-
-<div id="header">
-</div>
-<div id="main">
-	<div class="demo">
-		
-		
-		
-        <div id="player3" class="aplayer">
-            <pre class="aplayer-lrc-content">
-                [00:00.00]解药-演唱：来一碗老于
-[00:00.05]一尘不染
-[00:01.00]咖啡店等了一整夜夜夜夜
-[00:05.00]你只是没有出现
-[00:08.00]就在昨天
-[00:10.00]爱悄然离线
-[00:13.00]等到的只是冷却的留言
-            </pre>
-        </div>
-	</div>
-</div>
-<script>
-	var ap3 = new APlayer({
-		element: document.getElementById('player3'),//样式1
-		narrow: false,
-		autoplay: false,
-		showlrc: true,
-		music: {
-			title: '解药',
-			author: '来一碗老于',
-			url: 'a.mp3',
-			pic: 'tm.png'
-		}
-	});
-	ap3.init();
-</script>
-
-	</center>
-	<!------------------------------------------------------------------------------------------->
-                </div><br>
-		
-                <div style=" line-height: 20px;font-size: 9pt;">
-                    <p><div class="qinian"><div class="text-center main-shadow yiyan-box radius8 them-box"><p id="hitokoto">:D 获取中...</p><script src="https://v1.hitokoto.cn/?encode=js&amp;select=%23hitokoto" defer></script></div></div></p>
-                        <p style="margin-left: 8rem;font-size: 8pt;"><small>—— 星染</small></p>
-			
-			       </div>
+    <!-- loading动画 -->
+    <div id="pre-loader" class="loader-background">
+        <div class="spinner">
+            <div class="dot1">
             </div>
-         
+            <div class="dot2">
+            </div>
         </div>
+    </div>
+    <script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js">
+    </script>
+    <script type="text/javascript" language="JavaScript">
+        //: 判断网页是否加载完成
+        document.onreadystatechange = function() {
+            if (document.readyState == "complete") {
+                $("#pre-loader").fadeOut("slow");
+                document.getElementById("pre-loader").remove();
+            }
+        }
+    </script>
+    <div class="wrapper">
+        <header>
+            <!--PC端顶部导航-->
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-header header-logo"><a href="https://jhxxr.github.io/jhxnb/">星染</a></div>
+                    <div class="menu navbar-right">
+                        <a class="menu-item" href="/notes">日记</a>
+                        <a class="menu-item" href="/about">关于</a>
+                        <a class="menu-item" href="/friends">朋友们</a>
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+                    </div>
+                </div>
+                <div id="tp-weather-widget"></div>
+                
+            </nav>
+            <!--移动端顶部导航-->
+            <nav class="navbar-mobile" id="nav-mobile">
+                <div class="container">
+                    <div class="navbar-header">
+                        <div>
+                            <div id="tp-weather-widget"></div>
+                            <a href="/">FeiNiaotoulin</a>
+                            <a id="mobile-toggle-theme"></a>
+                        </div>
+                        <div class="menu-toggle" onclick="mobileBtn()">☰ Menu</div>
+                    </div>
+                    <div class="menu" id="mobile-menu">
+                        <a class="menu-item" href="/notes">日记</a>
+                        <a class="menu-item" href="/about">关于</a>
+                        <a class="menu-item" href="/friends">朋友们</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <script>
+            var mobileBtn = function f() {
+                var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+                var mobileMenu = document.getElementById("mobile-menu");
+                if (toggleMenu.classList.contains("active")) {
+                    toggleMenu.classList.remove("active")
+                    mobileMenu.classList.remove("active")
+                } else {
+                    toggleMenu.classList.add("active")
+                    mobileMenu.classList.add("active")
+                }
+            }
+        </script>
+        <!--页面内容-->
+        <div class="main">
+            <div class="container">
+                <div class="intro">
+                    <div class="avatar">
+                        <!--头像-->
+                        <a href="/about">
+                            <img src="http://q2.qlogo.cn/headimg_dl?dst_uin=2471717907&spec=2" class="img-full img-circle normal-shadow"></a>
+                    </div>
+                    <!--名字+签名-->
+                    <div class="nickname">星染</div>
+                    <div class="description">
+                        <p class="line-1 anim-typewriter">星辰大海，未来可期</p>
+                    </div>
+                        <script>
+                            $(function() {
+                                typedword();
+                            })
+                        </script>
+<p>
+    <i style="color:red;" class="fa fa-heart" aria-hidden="true"></i>
+    <span id="wordindex"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span>
+    <i style="color:red;" class="fa fa-heart" aria-hidden="true"></i>
+    <script>$(function(){typedword();})</script>
+</p>
+                    <!--导航链接-->
+                    
+                </div>
+            </div>
+        </div>
+        <!--底部内容-->
+        <style>
+            #background {
+                z-index: -1;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        <canvas id="background"></canvas>
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                <span>© 2021-2022 | <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">
+                       备案号✔</a> </span>网站已平稳运行：<span id="site_runtime" style="color: #24a0f0;"></span>
+            </div>
+        </footer>
+        <!--百度统计-->
+        <script>
+            try {
+                if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 
-</div>
+                } else {
 
-<footer id="footer" class="footer">
+                    var canvas = document.querySelector('canvas'),
+                        ctx = canvas.getContext('2d')
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
+                    ctx.lineWidth = .3;
+                    ctx.strokeStyle = (new Color(150)).style;
+
+                    var mousePosition = {
+                        x: 30 * canvas.width / 100,
+                        y: 30 * canvas.height / 100
+                    };
+
+                    var dots = {
+                        nb: 250,
+                        distance: 100,
+                        d_radius: 150,
+                        array: []
+                    };
+
+                    function colorValue(min) {
+                        return Math.floor(Math.random() * 255 + min);
+                    }
+
+                    function createColorStyle(r, g, b) {
+                        return 'rgba(' + r + ',' + g + ',' + b + ', 0.8)';
+                    }
+
+                    function mixComponents(comp1, weight1, comp2, weight2) {
+                        return (comp1 * weight1 + comp2 * weight2) / (weight1 + weight2);
+                    }
+
+                    function averageColorStyles(dot1, dot2) {
+                        var color1 = dot1.color,
+                            color2 = dot2.color;
+
+                        var r = mixComponents(color1.r, dot1.radius, color2.r, dot2.radius),
+                            g = mixComponents(color1.g, dot1.radius, color2.g, dot2.radius),
+                            b = mixComponents(color1.b, dot1.radius, color2.b, dot2.radius);
+                        return createColorStyle(Math.floor(r), Math.floor(g), Math.floor(b));
+                    }
+
+                    function Color(min) {
+                        min = min || 0;
+                        this.r = colorValue(min);
+                        this.g = colorValue(min);
+                        this.b = colorValue(min);
+                        this.style = createColorStyle(this.r, this.g, this.b);
+                    }
+
+                    function Dot() {
+                        this.x = Math.random() * canvas.width;
+                        this.y = Math.random() * canvas.height;
+
+                        this.vx = -.5 + Math.random();
+                        this.vy = -.5 + Math.random();
+
+                        this.radius = Math.random() * 2;
+
+                        this.color = new Color();
+                        console.log(this);
+                    }
+
+                    Dot.prototype = {
+                        draw: function() {
+                            ctx.beginPath();
+                            ctx.fillStyle = this.color.style;
+                            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+                            ctx.fill();
+                        }
+                    };
+
+                    function createDots() {
+                        for (i = 0; i < dots.nb; i++) {
+                            dots.array.push(new Dot());
+                        }
+                    }
+
+                    function moveDots() {
+                        for (i = 0; i < dots.nb; i++) {
+
+                            var dot = dots.array[i];
+
+                            if (dot.y < 0 || dot.y > canvas.height) {
+                                dot.vx = dot.vx;
+                                dot.vy = -dot.vy;
+                            } else if (dot.x < 0 || dot.x > canvas.width) {
+                                dot.vx = -dot.vx;
+                                dot.vy = dot.vy;
+                            }
+                            dot.x += dot.vx;
+                            dot.y += dot.vy;
+                        }
+                    }
+
+                    function connectDots() {
+                        for (i = 0; i < dots.nb; i++) {
+                            for (j = 0; j < dots.nb; j++) {
+                                i_dot = dots.array[i];
+                                j_dot = dots.array[j];
+
+                                if ((i_dot.x - j_dot.x) < dots.distance && (i_dot.y - j_dot.y) < dots.distance && (i_dot.x - j_dot.x) > -dots.distance && (i_dot.y - j_dot.y) > -dots.distance) {
+                                    if ((i_dot.x - mousePosition.x) < dots.d_radius && (i_dot.y - mousePosition.y) < dots.d_radius && (i_dot.x - mousePosition.x) > -dots.d_radius && (i_dot.y - mousePosition.y) > -dots.d_radius) {
+                                        ctx.beginPath();
+                                        ctx.strokeStyle = averageColorStyles(i_dot, j_dot);
+                                        ctx.moveTo(i_dot.x, i_dot.y);
+                                        ctx.lineTo(j_dot.x, j_dot.y);
+                                        ctx.stroke();
+                                        ctx.closePath();
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    function drawDots() {
+                        for (i = 0; i < dots.nb; i++) {
+                            var dot = dots.array[i];
+                            dot.draw();
+                        }
+                    }
+
+                    function animateDots() {
+                        ctx.clearRect(0, 0, canvas.width, canvas.height);
+                        moveDots();
+                        //connectDots();
+                        drawDots();
+
+                        requestAnimationFrame(animateDots);
+                    }
 
 
-CopyRight ©2021 | 星染 | jhx：<a color="red" href=""></a>
+                    createDots();
+                    requestAnimationFrame(animateDots);
 
-</footer>
+                }
+            } catch (e) {}
+        </script>
+        <script type="text/javascript">
+            $("body").css("cursor", "url('./shownormal.cur'), default");
+            $("a").css("cursor", "url('./link.cur'), pointer");
+            /*网站打开提醒代码开始*/
+            $(function() {
+                if ( /*getCookie('msg') !=*/ 1) {
+                    var t = document.createElement("a");
+                    t.href = document.referrer;
+                    var msgTitle = t.hostname;
+                    var name = t.hostname.split(".")[1];
+                    if ("" !== document.referrer) {
+                        switch (name) {
+                            case 'bing':
+                                msgTitle = '必应搜索';
+                                break;
+                            case 'baidu':
+                                msgTitle = '百度搜索';
+                                break;
+                            case 'so':
+                                msgTitle = '360搜索';
+                                break;
+                            case 'google':
+                                msgTitle = '谷歌搜索';
+                                break;
+                            case 'sm':
+                                msgTitle = '神马搜索';
+                                break;
+                            case 'sogou':
+                                msgTitle = '搜狗搜索';
+                                break;
+                            default:
+                                msgTitle = t.hostname;
+                        }
+                    };
+                    var time = (new Date).getHours();
+                    var msg = '';
+                    23 < time || time <= 5 ? msg = "你是夜猫子呀？这么晚还不睡觉，明天起的来嘛？" :
+                        5 < time && time <= 7 ? msg = "早上好！一日之计在于晨，美好的一天就要开始了！" :
+                        7 < time && time <= 11 ? msg = "上午好！工作顺利嘛，不要久坐，多起来走动走动哦！" :
+                        11 < time && time <= 14 ? msg = "中午了，工作了一个上午，现在是午餐时间！" :
+                        14 < time && time <= 17 ? msg = "午后很容易犯困呢，今天的运动目标完成了吗？" :
+                        17 < time && time <= 19 ? msg = "傍晚了！窗外夕阳的景色很美丽呢，最美不过夕阳红~" :
+                        19 < time && time <= 21 ? msg = "晚上好，今天过得怎么样？" :
+                        21 < time && time <= 23 && (msg = "已经这么晚了呀，早点休息吧，晚安~");
+                    $.ajax({
+                        type: "get",
+                        url: "https://api.gmit.vip/api/UserInfo/",
+                        async: true,
+                        success: function(data) {
+                            layer.alert("<center>Hi~ 来自" + data.data.location + '~<br/>通过 ' + msgTitle + ' 进来的朋友！<br/>使用 ' + data.data.os + "<br/>" + data.data.browser + ' 访问星染的主页！' + '<br/>' + msg + '</center>');
+                            var showFPS = (function() {
+                                var requestAnimationFrame =
+                                    window.requestAnimationFrame ||
+                                    window.webkitRequestAnimationFrame ||
+                                    window.mozRequestAnimationFrame ||
+                                    window.oRequestAnimationFrame ||
+                                    window.msRequestAnimationFrame ||
+                                    function(callback) {
+                                        window.setTimeout(callback, 1000 / 60);
+                                    };
+                                var e, pe, pid, fps, last, offset, step, appendFps;
 
-</div>
+                                fps = 0;
+                                last = Date.now();
+                                step = function() {
+                                    offset = Date.now() - last;
+                                    fps += 1;
+                                    if (offset >= 1000) {
+                                        last += offset;
+                                        appendFps(fps);
+                                        fps = 0;
+                                    }
+                                    requestAnimationFrame(step);
+                                };
+                                appendFps = function(fps) {
+                                    var settings = {
+                                        timeout: 5000,
+                                        logError: true
+                                    }
+                                    var p = new Ping(settings);
+                                    p.ping("https://www.lengxuan.top", function(perr, ping) {
+                                        if (perr) {
+                                            $('#fps').html('<span style="float:right">' + fps + 'FPS</span><br/><span style="float:right">' + window.info.data.os + '</span><br/><span style="float:right;margin-top:1px;">' + window.info.data.browser + '</span><br/><span style="float:right;margin-top:1px;">' + window.info.data.location + '</span><br/><span style="float:right;margin-top:1px;">©2021 冷轩</span>');
+                                        }
+                                        if (ping) {
+                                            $('#fps').html('<span style="float:right">' + fps + 'FPS</span><br/><span style="float:right">' + window.info.data.os + '</span><br/><span style="float:right;margin-top:1px;">' + window.info.data.browser + '</span><br/><span style="float:right;margin-top:1px;">' + window.info.data.location + ' ' + ping + 'ms</span><br/><span style="float:right;margin-top:1px;">©2021 冷轩</span>');
+                                        }
+                                        console.log(fps + 'FPS ' + ping + 'ms');
+                                    });
+                                };
+                                step();
+                            })();
+                        }
+                    });
+                };
+            });
+        </script>
+        <script>
+            function typedword() {
+                $.ajax({
+                    type: "get",
+                    url: "https://open.gmit.vip/web/lib/index",
+                    data: {
+                        page: 'index'
+                    },
+                    async: true,
+                    success: function(word) {
+                        var list = [];
+                        for (var i = 0; i < word.data.length; i++) {
+                            list.push(word.data[i]['word']);
+                        }
+                        $("#wordindex").typed({
+                            strings: list,
+                            typeSpeed: 20,
+                            loop: true,
+                            backDelay: 3000,
+                        });
+                    }
+                });
+            }
+        </script>
+    </div>
+</body>
 
- <!-- 音乐 -->
-          <audio src="etc/she.mp3" id="audio"></audio>
-          <script src="js/jquery-1.11.0.min.js"></script>
-          <script src="js/sweetalert.min.js"> </script>
-          <script src="js/main.js"></script>
-          
-<!--樱花飘落-->
-<script src="./js/jquery.min.js">
-</script>
-
-<!--防扒-->
-<script src="./js/fangba.js">
-</script>
-
-          
-</body></html>
+</html>

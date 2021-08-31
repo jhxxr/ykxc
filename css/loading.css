@@ -1,0 +1,730 @@
+.img-full {
+    animation: light 4s ease-in-out infinite;
+}
+
+@keyframes light {
+    0% {
+        box-shadow: 0 0 4px #000;
+    }
+
+    25% {
+        box-shadow: 0 0 16px #000;
+    }
+
+    50% {
+        box-shadow: 0 0 4px #000;
+    }
+
+    75% {
+        box-shadow: 0 0 16px #000;
+    }
+
+    100% {
+        box-shadow: 0 0 4px #000;
+    }
+}
+
+.loader-background {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    top: 0;
+    pointer-events: none;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.spinner {
+    margin: 350px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    text-align: center;
+    -webkit-animation: sk-rotate 2.0s infinite linear;
+    animation: sk-rotate 2.0s infinite linear;
+}
+
+.dot1 {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: #000000;
+    border-radius: 100%;
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.dot2 {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: #ffffff;
+    border-radius: 100%;
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.dot2 {
+    top: auto;
+    bottom: 0;
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-rotate {
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@keyframes sk-rotate {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes sk-bounce {
+
+    0%,
+    100% {
+        -webkit-transform: scale(0.0)
+    }
+
+    50% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes sk-bounce {
+
+    0%,
+    100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+
+    50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
+
+/*valine 评论系统样式*/
+.v * {
+    box-sizing: border-box;
+}
+
+.v.hide-avatar .vimg {
+    display: none
+}
+
+.v a {
+    position: relative;
+    cursor: pointer;
+    color: #1abc9c;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.v code,
+.v pre {
+    background-color: #f6f6f6;
+    color: #555;
+    padding: .2em .4em;
+    border-radius: 3px;
+    font-size: 85%;
+    margin: 0;
+    font-family: monospace
+}
+
+.v pre {
+    padding: 10px;
+    overflow: auto;
+    line-height: 1.45
+}
+
+.v pre code {
+    padding: 0;
+    background: transparent;
+    white-space: pre-wrap;
+    word-break: keep-all
+}
+
+.v blockquote {
+    margin: .5rem 0;
+    padding: 0 0 0 1rem;
+    border-left: 8px solid hsla(0, 0%, 93%, .5)
+}
+
+.v .vinput {
+    border: none;
+    resize: none;
+    outline: none;
+    padding: 10px 5px;
+    max-width: 100%;
+    font-size: .775rem
+}
+
+.v input[type=checkbox],
+.v input[type=radio] {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px
+}
+
+.v .vwrap {
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    position: relative;
+    padding: 0 0 27px;
+}
+
+.v .vwrap input {
+    background: transparent
+}
+
+.v .vwrap .vedit {
+    position: relative;
+}
+
+.v .vwrap .vedit .vctrl {
+    text-align: right;
+    font-size: 12px;
+    margin-top: -44px;
+    right: 0;
+    position: absolute;
+    margin-right: -10px;
+}
+
+.v .vwrap .vedit .vctrl span {
+    padding: 0 10px 0 0;
+    font-size: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer
+}
+
+.v .vwrap .vedit .vemojis {
+    display: none;
+    font-size: 18px;
+    text-align: justify;
+    max-height: 145px;
+    overflow: auto;
+    margin-bottom: 10px;
+    box-shadow: 0 0 1px #f0f0f0
+}
+
+.v .vwrap .vedit .vemojis i {
+    font-style: normal;
+    padding: 7px 0;
+    width: 38px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.v .vinput {
+    padding: 10px 15px;
+}
+
+.v .vwrap .vheader {
+    width: 80%;
+    bottom: 0;
+    position: absolute;
+    background: #f7f7f7;
+}
+
+.v .vwrap .vheader .vinput {
+    width: 40%;
+    border: 0;
+    border-radius: 0 !important;
+    -webkit-appearance: none !important;
+}
+
+.v .vwrap .vheader .vinput.vnick {
+    width: 20%;
+}
+
+.v .vwrap .vcontrol {
+    font-size: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 20%;
+}
+
+.v .vwrap .vcontrol .col {
+    display: inline-block;
+    font-size: .725rem;
+    vertical-align: middle;
+}
+
+.v .vwrap .vcontrol .col.text-right {
+    text-align: right
+}
+
+.v .vwrap .vcontrol .col svg {
+    margin-right: 2px;
+    overflow: hidden;
+    fill: currentColor;
+    vertical-align: middle
+}
+
+.v .vwrap .vcontrol .col.col-20 {
+    width: 20%
+}
+
+.v .vwrap .vcontrol .col.col-40 {
+    width: 40%
+}
+
+.v .vwrap .vcontrol .col.col-60 {
+    width: 60%
+}
+
+.v .vwrap .vcontrol .col.col-80 {
+    width: 100%
+}
+
+.v .vwrap .vcontrol .col.split {
+    width: 50%
+}
+
+.v .vwrap .vmark {
+    position: absolute;
+    background: rgba(0, 0, 0, .65);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0
+}
+
+.v .vwrap .vmark .valert {
+    padding-top: 3rem
+}
+
+.v .vwrap .vmark .valert .vtext {
+    padding: 1rem 0
+}
+
+.v .vwrap .vmark .valert .vcode {
+    width: 4.6875rem;
+    border-radius: .3125rem;
+    padding: .5rem;
+    background: #dedede
+}
+
+.v .power,
+.v .power a {
+    text-align: right;
+    font-size: 0.75rem;
+}
+
+.v .vinfo {
+    display: none !important;
+    font-size: 0;
+    padding: 5px
+}
+
+.v .vinfo .col {
+    font-size: .875rem;
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle
+}
+
+.v .vinfo .vcount .vnum {
+    font-weight: 600;
+    font-size: 1.25rem
+}
+
+.v ol,
+.v ul {
+    padding: 0;
+    margin-left: 1.25rem
+}
+
+.v .txt-center {
+    text-align: center
+}
+
+.v .veditor {
+    width: 100%;
+    min-height: 7rem;
+    font-size: .875rem;
+    background: transparent;
+    resize: none;
+    transition: all .25s ease
+}
+
+.v .vbtn {
+    color: #fff;
+    transition-duration: .4s;
+    text-align: center;
+    border: 0;
+    display: inline-block;
+    background: #000;
+    margin-bottom: 0;
+    font-weight: 400;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: .875rem;
+    height: 36px;
+    line-height: 36px;
+    user-select: none;
+    outline: none;
+    width: 100%;
+    border-radius: 0;
+    padding: 0
+}
+
+.v .vempty {
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.v .vlist {
+    width: 100%
+}
+
+.v .vlist .vcard {
+    padding-top: 0.5rem;
+    position: relative;
+    display: block
+}
+
+.v .vlist .vcard:after {
+    content: "";
+    clear: both;
+    display: block
+}
+
+.v .vlist .vcard .vimg {
+    width: 3.125rem;
+    height: 3.125rem;
+    float: left;
+    border-radius: 50%;
+    margin: 10px .7rem 0 0;
+}
+
+.v .vlist .vcard .vhead {
+    margin-top: 0
+}
+
+.v .vlist .vcard .vhead .vnick {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-right: .875rem;
+    cursor: pointer;
+    color: red;
+    text-decoration: none;
+    display: inline-block
+}
+
+.v .vlist .vcard .vh {
+    overflow: hidden;
+    padding-bottom: .5rem;
+}
+
+.v .vlist .vcard .vh .vtime {
+    font-size: .75rem;
+    margin-right: .875rem
+}
+
+.v .vlist .vcard .vh .vmeta {
+    line-height: 1;
+    position: relative
+}
+
+.v .vlist .vcard .vh .vmeta .vat {
+    font-size: .8125rem;
+    color: #fe5186;
+    cursor: pointer;
+    float: right
+}
+
+.v .vlist .vcard:last-child .vh {
+    border-bottom: none
+}
+
+.v .vlist .vcard .vcontent {
+    word-wrap: break-word;
+    word-break: break-all;
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 2;
+    position: relative;
+    margin-bottom: .75rem;
+    padding-top: .625rem
+}
+
+.v .vlist .vcard .vh .vcontent {
+    padding-top: 0
+}
+
+.vcontent p {
+    color: #A9A9B3;
+    font-family: roboto;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.v .vh .vh .vat {
+    margin-top: -15px;
+}
+
+.v .vlist .vcard .vcontent p {
+    margin: 0;
+}
+
+.v .vlist .vcard .vcontent frame,
+.v .vlist .vcard .vcontent iframe,
+.v .vlist .vcard .vcontent img {
+    max-width: 100%;
+    border: none
+}
+
+.v .vlist .vcard .vcontent.expand {
+    cursor: pointer;
+    max-height: 11.25rem;
+    overflow: hidden
+}
+
+.v .vlist .vcard .vcontent.expand:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 3.15rem;
+    pointer-events: none;
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, .9))
+}
+
+.v .vlist .vcard .vcontent.expand:after {
+    display: block;
+    content: "ç‚¹å‡»å±•å¼€";
+    text-align: center;
+    color: #828586;
+    position: absolute;
+    width: 100%;
+    height: 3.15rem;
+    line-height: 3.15rem;
+    left: 0;
+    bottom: 0;
+    pointer-events: none;
+    background: hsla(0, 0%, 100%, .6)
+}
+
+.v .vlist .vcard .vquote .vimg {
+    width: 2.225rem;
+    height: 2.225rem
+}
+
+.v .vpage .vmore {
+    margin: 1rem 0
+}
+
+@media screen and (max-width:684px) {
+    .v .vwrap .vheader .vinput {
+        padding: 10px 5px;
+    }
+
+    .v .vlist .vcard .vimg {
+        width: 2.5rem;
+        height: 2.5rem
+    }
+
+    .v .vwrap .vmark .valert {
+        padding-top: 5.5rem
+    }
+
+    .v .vwrap .vmark .valert .vtext {
+        padding: 1rem 0
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes pulse {
+    50% {
+        background: #dcdcdc
+    }
+}
+
+.v .vloading {
+    position: fixed;
+    padding: 20px;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.v .vloading:before {
+    box-sizing: border-box;
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #42b983;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s infinite linear
+}
+
+.v .vwrap .vedit .vctrl span.vpreview-btn,
+.v .vwrap .vcontrol .col.col-20,
+.v .vlist .vcard .vhead .vsys,
+.v .vh .vh .vtime {
+    display: none;
+}
+
+textarea[id='veditor']::placeholder {
+    color: #b3b3b3;
+    font-size: 15px;
+    text-align: center;
+    line-height: 3rem;
+}
+
+.dark-theme .v .vwrap {
+    border: 1px solid #4a4b50;
+}
+
+.dark-theme .v .vwrap input {
+    background: #dcdcdc;
+}
+
+.dark-theme .v .veditor {
+    color: #fff;
+}
+
+.dark-theme .v .vbtn {
+    color: #dcdcdc;
+    background: #4a4b50;
+}
+
+.dark-theme .v .vlist .vcard .vcontent.expand:before {
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, .1))
+}
+
+.dark-theme .v .vlist .vcard .vcontent.expand:after {
+    background: hsla(0, 0%, 6%, .86)
+}
+
+
+photos:after {
+    content: ".";
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0;
+}
+
+.clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+photos {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+photos .photo:nth-of-type(3n) {
+    margin-right: 0px;
+}
+
+photos .photo:last-child {
+    margin-right: 0px;
+}
+
+@media screen and (max-width: 860px) {
+    photos .photo {
+        width: 180px;
+        margin-right: 4px;
+        margin-bottom: 4px;
+        float: left;
+    }
+}
+
+@media screen and (min-width: 860px) {
+    photos .photo {
+        width: 245px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        float: left;
+    }
+}
+
+.pagination {
+    margin-top: 50px
+}
+
+.pagination__title {
+    display: flex;
+    text-align: center;
+    position: relative;
+    margin: 60px 0
+}
+
+.pagination__title-h {
+    text-align: center;
+    margin: 0 auto;
+    padding: 5px 10px;
+    background: #fff;
+    background: var(--light-background);
+    color: #999;
+    color: var(--light-color-secondary);
+    font-size: .8rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .1em;
+    z-index: 1;
+}
+
+.dark-theme .pagination__title-h {
+    background: #292a2d;
+    background: var(--dark-background);
+    color: #73747b;
+    color: var(--dark-color-secondary)
+}
+
+.pagination__title hr {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-top: 15px;
+    z-index: 0
+}

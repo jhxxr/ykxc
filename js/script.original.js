@@ -1,18 +1,18 @@
 // declaraction of document.ready() function.
-(function() {
+(function () {
     var ie = !!(window.attachEvent && !window.opera);
     var wk = /webkit\/(\d+)/i.test(navigator.userAgent) && (RegExp.$1 < 525);
     var fn = [];
-    var run = function() {
+    var run = function () {
         for (var i = 0; i < fn.length; i++) fn[i]();
     };
     var d = document;
-    d.ready = function(f) {
+    d.ready = function (f) {
         if (!ie && !wk && d.addEventListener)
             return d.addEventListener('DOMContentLoaded', f, false);
         if (fn.push(f) > 1) return;
         if (ie)
-            (function() {
+            (function () {
                 try {
                     d.documentElement.doScroll('left');
                     run();
@@ -21,7 +21,7 @@
                 }
             })();
         else if (wk)
-            var t = setInterval(function() {
+            var t = setInterval(function () {
                 if (/^(loaded|complete)$/.test(d.readyState))
                     clearInterval(t), run();
             }, 0);
@@ -31,7 +31,7 @@
 document.ready(
     // toggleTheme function.
     // this script shouldn't be changed.
-    function() {
+    function () {
         var _Blog = window._Blog || {};
         const currentTheme = window.localStorage && window.localStorage.getItem('theme');
         const isDark = currentTheme === 'dark';
@@ -44,7 +44,7 @@ document.ready(
             // mobile
             document.getElementById("mobile-toggle-theme").innerText = "🌙"
         }
-        _Blog.toggleTheme = function() {
+        _Blog.toggleTheme = function () {
             if (isDark) {
                 document.getElementsByTagName('body')[0].classList.add('dark-theme');
                 // mobile
@@ -61,7 +61,7 @@ document.ready(
                     document.getElementsByTagName('body')[0].classList.add('dark-theme');
                 }
                 window.localStorage &&
-                    window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light', )
+                window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light',)
             })
             // moblie
             document.getElementById('mobile-toggle-theme').addEventListener('click', () => {
@@ -76,7 +76,7 @@ document.ready(
                     document.getElementById("mobile-toggle-theme").innerText = "🌙"
                 }
                 window.localStorage &&
-                    window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light', )
+                window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light',)
             })
         };
         _Blog.toggleTheme();
@@ -86,19 +86,19 @@ document.ready(
     }
 );
 //动态网站名称
-var OriginTitile = document.title;
+var OriginTitile=document.title;
 var st;
-document.addEventListener('visibilitychange', function() {
-    if (document.hidden) {
-        document.title = "您有一封情书💌 请查收~";
-        clearTimeout(st);
-        console.log('hide');
-    } else {
-        document.title = OriginTitile;
-        console.log('show');
-        st = setTimeout(function() {
-            document.title = OriginTitile;
-        }, 4000);
-        console.log('endChange=');
-    }
+document.addEventListener('visibilitychange',function(){
+if(document.hidden){
+document.title="您有一封情书💌 请查收~";
+clearTimeout(st);
+console.log('hide');
+}else{
+document.title=OriginTitile;
+console.log('show');
+st=setTimeout(function(){
+document.title=OriginTitile;
+},4000);
+console.log('endChange=');
+}
 });
