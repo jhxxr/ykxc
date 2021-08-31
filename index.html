@@ -1,453 +1,147 @@
+<!-- YOYO影视[好好学习haohaoxuexi.xyz] -->
 <!DOCTYPE html>
-<html lang="en">
-<!-- 网站实时显示运行天数 -->
-<script type="text/javascript">
-    function show_site_runtime() {
-        window.setTimeout("show_site_runtime()", 1000); // 每秒运行一次函数
-        X = new Date("10/01/2021 12:00:00"); //在这里修改你的建站时间,月/日/年 时/分/秒
-        Y = new Date();
-        T = (Y.getTime() - X.getTime()); // 获取当前时间与指定时间之间的时间间隔（ms）	
-        i = 24 * 60 * 60 * 1000;
-        d = T / i;
-        D = Math.floor(d); // 计算天数并向下取整
-        h = (d - D) * 24;
-        H = Math.floor(h); // 计算剩余不足一天的小时数并向下取整
-        m = (h - H) * 60;
-        M = Math.floor(m); // 计算剩余不足一小时的分钟数并向下取整
-        s = (m - M) * 60
-        S = Math.floor(s); // 计算剩余不足一分钟的秒数并向下取整
-        site_runtime.innerHTML = D + " 天 " + H + " 小时 " + M + " 分 " + S + " 秒 "
-    }
-    show_site_runtime();
-</script>
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="anle">
-    <meta name="template" content="anle">
-    <meta name="fragment" content="!">
-    <meta name="description" content>
-    <meta name="keywords" content>
-<link rel="stylesheet" href="https://cdn.gmit.vip/FontAwesome/css/font-awesome.min.css" type="text/css" media="all" />
-    <title>星染</title>
-    <link rel="icon" href="https://i.coldxuan.com/favicon.ico">
-    <!-- loading样式 -->
-    <link rel="stylesheet" href="css/loading.css">
-    <!-- 页面核心样式 -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/iconfont.css">
-    <link href="pmd.css" rel="stylesheet">
-    <!--页面小部件集成-->
-    <script src="js/tool.js"></script>
-    <!-- 页面核心JavaScript -->
-    <script src="src/js/jquery.min.js"></script>
-    <script src="https://cdn.gmit.vip/var/libs/jquery/jquery/dist/jquery.js"></script>
-    <script src="https://cdn.gmit.vip/sweetalert/sweetalert/sweetalert.min.js"></script>
-    <script src="https://cdn.gmit.vip/blog/js/typed.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/script.js"></script>
-    <script src="js/tocbot.min.js"></script>
-    <script type="text/javascript" src="https://cdn.gmit.vip/website/api/js/bideo.js"></script>
-    <script src="https://cdn.gmit.vip/layer/3.1.1/layer.js" type="text/javascript" charset="utf-8"></script>
-    <script src="https://cdn.gmit.vip/blog/New/js/eye.js" type="text/javascript" charset="utf-8"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/lengxuan/cdnjs%40v1.1/anime.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/lengxuan/cdnjs%40v1.1/fireworks.js"></script>
-    <script type="text/javascript" src="https://cdn.gmit.vip/website/index/js/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.gmit.vip/website/index/js/ping.min.js"></script>
-    <script src="https://cdn.gmit.vip/blog/New/js/eye.js"></script>
-    <script src="https://cdn.gmit.vip/APlayer/dist/APlayer.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="https://cdn.gmit.vip/blog/js/typed.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="https://cdn.gmit.vip/layer/3.1.1/layer.js" type="text/javascript" charset="utf-8"></script>
-    <script type="text/javascript" src="https://cdn.gmit.vip/website/api/js/bideo.js"></script>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+<title>星染视频</title>
+<link rel="stylesheet" type="text/css" href="https://cdn.wxurl.cn/jquery/2.5.1/jquery.mobile.min.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
 </head>
-<!--顶部彩虹进度条-->
-<div class="colorTopBar"></div>
 
-<body>
-    <!-- loading动画 -->
-    <div id="pre-loader" class="loader-background">
-        <div class="spinner">
-            <div class="dot1">
-            </div>
-            <div class="dot2">
-            </div>
-        </div>
-    </div>
-    <script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js">
-    </script>
-    <script type="text/javascript" language="JavaScript">
-        //: 判断网页是否加载完成
-        document.onreadystatechange = function() {
-            if (document.readyState == "complete") {
-                $("#pre-loader").fadeOut("slow");
-                document.getElementById("pre-loader").remove();
-            }
-        }
-    </script>
-    <div class="wrapper">
-        <header>
-            <!--PC端顶部导航-->
-            <nav class="navbar">
-                <div class="container">
-                    <div class="navbar-header header-logo"><a href="https://jhxxr.github.io/jhxnb/">星染</a></div>
-                    <div class="menu navbar-right">
-                        <a class="menu-item" href="/notes">日记</a>
-                        <a class="menu-item" href="/about">关于</a>
-                        <a class="menu-item" href="/friends">朋友们</a>
-                        <input id="switch_default" type="checkbox" class="switch_default">
-                        <label for="switch_default" class="toggleBtn"></label>
-                    </div>
-                </div>
-                <div id="tp-weather-widget"></div>
-                
-            </nav>
-            <!--移动端顶部导航-->
-            <nav class="navbar-mobile" id="nav-mobile">
-                <div class="container">
-                    <div class="navbar-header">
-                        <div>
-                            <div id="tp-weather-widget"></div>
-                            <a href="/">FeiNiaotoulin</a>
-                            <a id="mobile-toggle-theme"></a>
-                        </div>
-                        <div class="menu-toggle" onclick="mobileBtn()">☰ Menu</div>
-                    </div>
-                    <div class="menu" id="mobile-menu">
-                        <a class="menu-item" href="/notes">日记</a>
-                        <a class="menu-item" href="/about">关于</a>
-                        <a class="menu-item" href="/friends">朋友们</a>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <script>
-            var mobileBtn = function f() {
-                var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
-                var mobileMenu = document.getElementById("mobile-menu");
-                if (toggleMenu.classList.contains("active")) {
-                    toggleMenu.classList.remove("active")
-                    mobileMenu.classList.remove("active")
-                } else {
-                    toggleMenu.classList.add("active")
-                    mobileMenu.classList.add("active")
-                }
-            }
-        </script>
-        <!--页面内容-->
-        <div class="main">
-            <div class="container">
-                <div class="intro">
-                    <div class="avatar">
-                        <!--头像-->
-                        <a href="/about">
-                            <img src="http://q2.qlogo.cn/headimg_dl?dst_uin=2471717907&spec=2" class="img-full img-circle normal-shadow"></a>
-                    </div>
-                    <!--名字+签名-->
-                    <div class="nickname">星染</div>
-                    <div class="description">
-                        <p class="line-1 anim-typewriter">星辰大海，未来可期</p>
-                    </div>
-                        <script>
-                            $(function() {
-                                typedword();
-                            })
-                        </script>
-<p>
-    <i style="color:red;" class="fa fa-heart" aria-hidden="true"></i>
-    <span id="wordindex"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span>
-    <i style="color:red;" class="fa fa-heart" aria-hidden="true"></i>
-    <script>$(function(){typedword();})</script>
-</p>
-                    <!--导航链接-->
-                    
-                </div>
-            </div>
-        </div>
-        <!--底部内容-->
-        <style>
-            #background {
-                z-index: -1;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
-        </style>
-        <canvas id="background"></canvas>
-        <footer id="footer" class="footer">
-            <div class="copyright">
-                <span>© 2021-2022 | <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">
-                       备案号✔</a> </span>网站已平稳运行：<span id="site_runtime" style="color: #24a0f0;"></span>
-            </div>
-        </footer>
-        <!--百度统计-->
-        <script>
-            try {
-                if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+<body class="body">
 
-                } else {
+<div class="header">
+	<a class="logo" href="index.html"><img src="images/logo.png" /></a>
+	<div class="search">
+		<input type="text" placeholder="输入你想看的" id="search" />
+		<a id="searchDo">全网搜索</a>
+	</div>
+	<div class="navigate">
+		<a href="index.html" class="current">精选</a>
+		<a href="list/dianshi.html">电视剧</a>
+		<a href="list/dianying.html">电影</a>
+		<a href="list/zongyi.html">综艺</a>
+		<a href="list/dongman.html">动漫</a>
+	</div>
+</div>
 
-                    var canvas = document.querySelector('canvas'),
-                        ctx = canvas.getContext('2d')
-                    canvas.width = window.innerWidth;
-                    canvas.height = window.innerHeight;
-                    ctx.lineWidth = .3;
-                    ctx.strokeStyle = (new Color(150)).style;
+<div class="s-slider">
+	<ul id="bannerList">
+		<div class="template">
+			<li><a href="{{href}}"><img src="{{pic}}" /><span>{{title}}</span></a></li>
+		</div>
+	</ul>
+	<ol></ol>
+</div>
 
-                    var mousePosition = {
-                        x: 30 * canvas.width / 100,
-                        y: 30 * canvas.height / 100
-                    };
+<div class="loading" id="loadBox">
+	<span class="s-loading"><i class="first"></i><i class="second"></i><i class="third"></i></span>
+</div>
 
-                    var dots = {
-                        nb: 250,
-                        distance: 100,
-                        d_radius: 150,
-                        array: []
-                    };
+<div id="dataBox" style="display:none">
 
-                    function colorValue(min) {
-                        return Math.floor(Math.random() * 255 + min);
-                    }
+	<div class="list">
 
-                    function createColorStyle(r, g, b) {
-                        return 'rgba(' + r + ',' + g + ',' + b + ', 0.8)';
-                    }
+		<h3 class="title">电视剧</h3>
 
-                    function mixComponents(comp1, weight1, comp2, weight2) {
-                        return (comp1 * weight1 + comp2 * weight2) / (weight1 + weight2);
-                    }
+		<div class="items" id="dianshiList">
+			<div class="template">
+				<a href="{{href}}">
+					<i style="background-image:url({{pic}})"><b>{{hint}}</b></i>
+					<span>{{title}}</span>
+				</a>
+			</div>
+			<span class="clear"></span>
+		</div>
 
-                    function averageColorStyles(dot1, dot2) {
-                        var color1 = dot1.color,
-                            color2 = dot2.color;
+		<div class="more">
+			<a href="list/dianshi.html"><img src="images/more_1.png" />更多电视剧</a>
+			<a class="switch-button" data-list-type="dianshi"><img src="images/more_2.png" />换一批</a>
+		</div>
+	</div>
 
-                        var r = mixComponents(color1.r, dot1.radius, color2.r, dot2.radius),
-                            g = mixComponents(color1.g, dot1.radius, color2.g, dot2.radius),
-                            b = mixComponents(color1.b, dot1.radius, color2.b, dot2.radius);
-                        return createColorStyle(Math.floor(r), Math.floor(g), Math.floor(b));
-                    }
+	<div class="clear" style="height:0.8rem"></div>
 
-                    function Color(min) {
-                        min = min || 0;
-                        this.r = colorValue(min);
-                        this.g = colorValue(min);
-                        this.b = colorValue(min);
-                        this.style = createColorStyle(this.r, this.g, this.b);
-                    }
+	<div class="list">
 
-                    function Dot() {
-                        this.x = Math.random() * canvas.width;
-                        this.y = Math.random() * canvas.height;
+		<h3 class="title">电影</h3>
 
-                        this.vx = -.5 + Math.random();
-                        this.vy = -.5 + Math.random();
+		<div class="items" id="dianyingList">
+			<div class="template">
+				<a href="{{href}}">
+					<i style="background-image:url({{pic}})"><b>{{hint}}</b></i>
+					<span>{{title}}</span>
+				</a>
+			</div>
+			<span class="clear"></span>
+		</div>
 
-                        this.radius = Math.random() * 2;
+		<div class="more">
+			<a href="list/dianying.html"><img src="images/more_1.png" />更多电影</a>
+			<a class="switch-button" data-list-type="dianying"><img src="images/more_2.png" />换一批</a>
+		</div>
+	</div>
 
-                        this.color = new Color();
-                        console.log(this);
-                    }
+	<div class="clear" style="height:0.8rem"></div>
 
-                    Dot.prototype = {
-                        draw: function() {
-                            ctx.beginPath();
-                            ctx.fillStyle = this.color.style;
-                            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-                            ctx.fill();
-                        }
-                    };
+	<div class="list">
 
-                    function createDots() {
-                        for (i = 0; i < dots.nb; i++) {
-                            dots.array.push(new Dot());
-                        }
-                    }
+		<h3 class="title">综艺</h3>
 
-                    function moveDots() {
-                        for (i = 0; i < dots.nb; i++) {
+		<div class="items" id="zongyiList">
+			<div class="template">
+				<a href="{{href}}">
+					<i style="background-image:url({{pic}})"><b>{{hint}}</b></i>
+					<span>{{title}}</span>
+				</a>
+			</div>
+			<span class="clear"></span>
+		</div>
 
-                            var dot = dots.array[i];
+		<div class="more">
+			<a href="list/zongyi.html"><img src="images/more_1.png" />更多综艺</a>
+			<a class="switch-button" data-list-type="zongyi"><img src="images/more_2.png" />换一批</a>
+		</div>
+	</div>
 
-                            if (dot.y < 0 || dot.y > canvas.height) {
-                                dot.vx = dot.vx;
-                                dot.vy = -dot.vy;
-                            } else if (dot.x < 0 || dot.x > canvas.width) {
-                                dot.vx = -dot.vx;
-                                dot.vy = dot.vy;
-                            }
-                            dot.x += dot.vx;
-                            dot.y += dot.vy;
-                        }
-                    }
+	<div class="clear" style="height:0.8rem"></div>
 
-                    function connectDots() {
-                        for (i = 0; i < dots.nb; i++) {
-                            for (j = 0; j < dots.nb; j++) {
-                                i_dot = dots.array[i];
-                                j_dot = dots.array[j];
+	<div class="list">
 
-                                if ((i_dot.x - j_dot.x) < dots.distance && (i_dot.y - j_dot.y) < dots.distance && (i_dot.x - j_dot.x) > -dots.distance && (i_dot.y - j_dot.y) > -dots.distance) {
-                                    if ((i_dot.x - mousePosition.x) < dots.d_radius && (i_dot.y - mousePosition.y) < dots.d_radius && (i_dot.x - mousePosition.x) > -dots.d_radius && (i_dot.y - mousePosition.y) > -dots.d_radius) {
-                                        ctx.beginPath();
-                                        ctx.strokeStyle = averageColorStyles(i_dot, j_dot);
-                                        ctx.moveTo(i_dot.x, i_dot.y);
-                                        ctx.lineTo(j_dot.x, j_dot.y);
-                                        ctx.stroke();
-                                        ctx.closePath();
-                                    }
-                                }
-                            }
-                        }
-                    }
+		<h3 class="title">动漫</h3>
 
-                    function drawDots() {
-                        for (i = 0; i < dots.nb; i++) {
-                            var dot = dots.array[i];
-                            dot.draw();
-                        }
-                    }
+		<div class="items" id="dongmanList">
+			<div class="template">
+				<a href="{{href}}">
+					<i style="background-image:url({{pic}})"><b>{{hint}}</b></i>
+					<span>{{title}}</span>
+				</a>
+			</div>
+			<span class="clear"></span>
+		</div>
 
-                    function animateDots() {
-                        ctx.clearRect(0, 0, canvas.width, canvas.height);
-                        moveDots();
-                        //connectDots();
-                        drawDots();
+		<div class="more">
+			<a href="list/dongman.html"><img src="images/more_1.png" />更多动漫</a>
+			<a class="switch-button" data-list-type="dongman"><img src="images/more_2.png" />换一批</a>
+		</div>
+	</div>
 
-                        requestAnimationFrame(animateDots);
-                    }
+	<div class="clear" style="height:3rem"></div>
 
+	<div class="copyright">
+		<p>本站内容均来自于互联网资源实时抓取</p>
+		<p>仅用做学习交流</p>
+	</div>
 
-                    createDots();
-                    requestAnimationFrame(animateDots);
+</div>
 
-                }
-            } catch (e) {}
-        </script>
-        <script type="text/javascript">
-            $("body").css("cursor", "url('./shownormal.cur'), default");
-            $("a").css("cursor", "url('./link.cur'), pointer");
-            /*网站打开提醒代码开始*/
-            $(function() {
-                if ( /*getCookie('msg') !=*/ 1) {
-                    var t = document.createElement("a");
-                    t.href = document.referrer;
-                    var msgTitle = t.hostname;
-                    var name = t.hostname.split(".")[1];
-                    if ("" !== document.referrer) {
-                        switch (name) {
-                            case 'bing':
-                                msgTitle = '必应搜索';
-                                break;
-                            case 'baidu':
-                                msgTitle = '百度搜索';
-                                break;
-                            case 'so':
-                                msgTitle = '360搜索';
-                                break;
-                            case 'google':
-                                msgTitle = '谷歌搜索';
-                                break;
-                            case 'sm':
-                                msgTitle = '神马搜索';
-                                break;
-                            case 'sogou':
-                                msgTitle = '搜狗搜索';
-                                break;
-                            default:
-                                msgTitle = t.hostname;
-                        }
-                    };
-                    var time = (new Date).getHours();
-                    var msg = '';
-                    23 < time || time <= 5 ? msg = "你是夜猫子呀？这么晚还不睡觉，明天起的来嘛？" :
-                        5 < time && time <= 7 ? msg = "早上好！一日之计在于晨，美好的一天就要开始了！" :
-                        7 < time && time <= 11 ? msg = "上午好！工作顺利嘛，不要久坐，多起来走动走动哦！" :
-                        11 < time && time <= 14 ? msg = "中午了，工作了一个上午，现在是午餐时间！" :
-                        14 < time && time <= 17 ? msg = "午后很容易犯困呢，今天的运动目标完成了吗？" :
-                        17 < time && time <= 19 ? msg = "傍晚了！窗外夕阳的景色很美丽呢，最美不过夕阳红~" :
-                        19 < time && time <= 21 ? msg = "晚上好，今天过得怎么样？" :
-                        21 < time && time <= 23 && (msg = "已经这么晚了呀，早点休息吧，晚安~");
-                    $.ajax({
-                        type: "get",
-                        url: "https://api.gmit.vip/api/UserInfo/",
-                        async: true,
-                        success: function(data) {
-                            layer.alert("<center>Hi~ 来自" + data.data.location + '~<br/>通过 ' + msgTitle + ' 进来的朋友！<br/>使用 ' + data.data.os + "<br/>" + data.data.browser + ' 访问星染的主页！' + '<br/>' + msg + '</center>');
-                            var showFPS = (function() {
-                                var requestAnimationFrame =
-                                    window.requestAnimationFrame ||
-                                    window.webkitRequestAnimationFrame ||
-                                    window.mozRequestAnimationFrame ||
-                                    window.oRequestAnimationFrame ||
-                                    window.msRequestAnimationFrame ||
-                                    function(callback) {
-                                        window.setTimeout(callback, 1000 / 60);
-                                    };
-                                var e, pe, pid, fps, last, offset, step, appendFps;
+<a class="scroll-to-top" id="scrollToTop"></a>
 
-                                fps = 0;
-                                last = Date.now();
-                                step = function() {
-                                    offset = Date.now() - last;
-                                    fps += 1;
-                                    if (offset >= 1000) {
-                                        last += offset;
-                                        appendFps(fps);
-                                        fps = 0;
-                                    }
-                                    requestAnimationFrame(step);
-                                };
-                                appendFps = function(fps) {
-                                    var settings = {
-                                        timeout: 5000,
-                                        logError: true
-                                    }
-                                    var p = new Ping(settings);
-                                    p.ping("https://www.lengxuan.top", function(perr, ping) {
-                                        if (perr) {
-                                            $('#fps').html('<span style="float:right">' + fps + 'FPS</span><br/><span style="float:right">' + window.info.data.os + '</span><br/><span style="float:right;margin-top:1px;">' + window.info.data.browser + '</span><br/><span style="float:right;margin-top:1px;">' + window.info.data.location + '</span><br/><span style="float:right;margin-top:1px;">©2021 冷轩</span>');
-                                        }
-                                        if (ping) {
-                                            $('#fps').html('<span style="float:right">' + fps + 'FPS</span><br/><span style="float:right">' + window.info.data.os + '</span><br/><span style="float:right;margin-top:1px;">' + window.info.data.browser + '</span><br/><span style="float:right;margin-top:1px;">' + window.info.data.location + ' ' + ping + 'ms</span><br/><span style="float:right;margin-top:1px;">©2021 冷轩</span>');
-                                        }
-                                        console.log(fps + 'FPS ' + ping + 'ms');
-                                    });
-                                };
-                                step();
-                            })();
-                        }
-                    });
-                };
-            });
-        </script>
-        <script>
-            function typedword() {
-                $.ajax({
-                    type: "get",
-                    url: "https://open.gmit.vip/web/lib/index",
-                    data: {
-                        page: 'index'
-                    },
-                    async: true,
-                    success: function(word) {
-                        var list = [];
-                        for (var i = 0; i < word.data.length; i++) {
-                            list.push(word.data[i]['word']);
-                        }
-                        $("#wordindex").typed({
-                            strings: list,
-                            typeSpeed: 20,
-                            loop: true,
-                            backDelay: 3000,
-                        });
-                    }
-                });
-            }
-        </script>
-    </div>
+<script src="https://cdn.wxurl.cn/jquery/2.5.1/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/index.js"></script>
 </body>
-
 </html>

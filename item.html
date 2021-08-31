@@ -1,0 +1,99 @@
+<!-- 感谢关注葫芦侠三楼墨祁yyds -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+<title>正在播放 - {{title}}</title>
+<link rel="stylesheet" type="text/css" href="https://cdn.wxurl.cn/jquery/2.5.1/jquery.mobile.min.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/item.css">
+</head>
+
+<body class="body">
+
+<!-- 自定义解析接口[去掉注释使用i标签依次罗列即可,此处定义优先于common.js的定义，下方链接修改播放接口] -->
+<div style="display:none" id="jsApiList">
+	<!-- 
+	<i>https://vip.52jiexi.top/?url=</i>
+	<i>http://17kyun.com/api.php?url=</i>
+	 -->
+</div>
+
+<div class="header one">
+	<a class="logo" href="index.html"><img src="images/logo.png" /></a>
+	<div class="search">
+		<input type="text" placeholder="输入你想看的" id="search" />
+		<a id="searchDo">全网搜索</a>
+	</div>
+</div>
+
+<div class="loading" id="loadBox">
+	<span class="s-loading"><i class="first"></i><i class="second"></i><i class="third"></i></span>
+</div>
+
+<div id="dataBox" style="display:none">
+
+	<div id="playBox">
+
+		<div class="play-box" id="playBoxIframe">
+			<div class="tip">如无法播放请尝试切换线路，或<a href="">点击前往<span></span>播放</a><i class="close"></i></div>
+		</div>
+
+		<div class="clear" style="height:0.3rem"></div>
+
+		<h3 class="from-title" id="titleItem"></h3>
+		<div class="from" id="fromList" style="display:none">
+			<div class="template"><a data-api="{{api}}" data-href="{{href}}" data-hasmore="{{hasmore}}" data-site="{{site}}">线路{{number}}</a></div>
+			<span class="clear"></span>
+		</div>
+
+		<div class="loading" id="loadBox2">
+			<span class="s-loading"><i class="first"></i><i class="second"></i><i class="third"></i></span>
+		</div>
+
+		<div class="episodes" id="episodesBox" style="display:none;">
+			<div class="clear" style="height:0.3rem"></div>
+			<h3 class="episodes-title">选集</h3>
+			<div id="episodesList">
+				<div class="template"><a data-api="{{api}}" data-href="{{href}}">{{number}}</a></div>
+				<span class="clear"></span>
+			</div>
+		</div>
+	</div>
+
+	<div class="no-data" id="noDataBox" style="display:none">未找到可用播放线路</div>
+
+	<div class="clear" style="height:2rem"></div>
+
+	<div id="itemList" style="display:none">
+		<div class="template">
+			<div class="more">
+				<i style="background-image:url({{pic}})"></i>
+				<h5>{{title}}</h5>
+				{{item}}
+			</div>
+			<div class="more desc">
+				<div>简介：{{desc}}</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="clear" style="height:3rem"></div>
+
+	<div class="copyright">
+		<p>本站内容均来自于互联网资源实时抓取</p>
+		<p>仅用做学习交流</p>
+	</div>
+
+</div>
+
+<a class="scroll-to-top" id="scrollToTop"></a>
+
+<script src="https://cdn.wxurl.cn/jquery/2.5.1/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/item.js"></script>
+</body>
+</html>

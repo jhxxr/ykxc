@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+<title>搜索结果</title>
+<link rel="stylesheet" type="text/css" href="https://cdn.wxurl.cn/jquery/2.5.1/jquery.mobile.min.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+</head>
+
+<body class="body">
+
+<div class="header">
+	<a class="logo" href="../index.html"><img src="../images/logo.png" /></a>
+	<div class="search">
+		<input type="text" placeholder="输入你想看的" id="search" />
+		<a id="searchDo">全网搜索</a>
+	</div>
+	<div class="navigate">
+		<a href="../index.html">精选</a>
+		<a href="dianshi.html">电视剧</a>
+		<a href="dianying.html">电影</a>
+		<a href="zongyi.html">综艺</a>
+		<a href="dongman.html">动漫</a>
+	</div>
+</div>
+
+<div class="clear" style="height:0.5rem"></div>
+
+<div class="loading" id="loadBox">
+	<span class="s-loading"><i class="first"></i><i class="second"></i><i class="third"></i></span>
+</div>
+
+<div id="dataBox" style="display:none">
+
+	<div class="keywords" id="keywordItem"><b>“{{keyword}}”</b> 的搜索结果：</div>
+
+	<div class="list">
+
+		<div class="no-data" id="noDataBox" style="display:none;margin-top:1rem;background:none">没有找到相关影片，请尝试其他关键词！</div>
+
+		<div class="items" id="listList">
+			<div class="template">
+				<a href="{{href}}" data-id="{{id}}">
+					<i style="background-image:url({{pic}})"><b>{{hint}}</b></i>
+					<span>{{title}}</span>
+				</a>
+			</div>
+			<span class="clear"></span>
+		</div>
+
+		<div class="more one" style="display:none">
+			<a id="loadMore"><img src="../images/more.png" />加载更多</a>
+			<span class="s-loading" id="loading"><i class="first"></i><i class="second"></i><i class="third"></i></span>
+		</div>
+	</div>
+
+
+	<div class="clear" style="height:3rem"></div>
+
+	<div class="copyright">
+		<p>本站内容均来自于互联网资源实时抓取</p>
+		<p>仅用做学习交流</p>
+	</div>
+</div>
+
+<a class="scroll-to-top" id="scrollToTop"></a>
+
+<script src="https://cdn.wxurl.cn/jquery/2.5.1/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>
