@@ -1,67 +1,91 @@
-<!DOCTYPE HTML>
-<html>
+<!--
+    
+-->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta name="baidu-site-verification" content="code-wJglJ2Up6N" />
-<head>
-<title>小盒子</title>
-<meta charset="utf-8">
-<meta name="baidu-site-verification" content="b9lOcChmbf">
-<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-<link rel="shortcut icon" href="https://www.tuchuangs.com/view.php/e560b9edf4387794733c4cdbc4239809.jpg" />
-<link rel="stylesheet" href="css/main.css">
-<noscript>
-<link rel="stylesheet" href="css/noscript.css"/>
-</noscript>
+    <meta charset="UTF-8">
+    <title>遥控小车</title>
+    <meta name="description" content="遥控小车">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta itemprop="image" content="/favicon/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/logo.png">
+    <meta name="apple-mobile-web-app-title" content="遥控小车">
+    <meta name="application-name" content="遥控小车">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-<div id="wrapper">
-	<header id="header">
-	<div class="logo">
-		<img src="https://wx2.sinaimg.cn/large/b3e366e1gy1gsn8getp7hj20tq0tqjtp.jpg" class="logo">
-	</div>
-	<div class="content">
-		<div class="inner">
-			<h1>星染精追剧</h1>
-			<p>超多免费影视聚合！<br>
-			<p>快手抖音小姐姐视频在线观看!<br>绅士必备
-			<p>全网影视皆可免费观看，太棒了!<br>
-			</p>
-		</div>
-	</div>
-	<nav>
-		<script type="text/javascript">
-			function duihua()
-			{
-			alert("冠军")
-			}
-		</script>
-	<ul>
-		<li><a href="http://jx.vc8.us/yzvqq/" target="_blank">腾讯视频</a></li><!-- 按钮1-->
-		<li><a href="http://jx.vc8.us/yziqiyi/" target="_blank">奇艺视频</a></li><!-- 按钮2-->
-		<li><a href="http://jx.vc8.us/yzyouku/" target="_blank">优酷视频</a></li><!-- 按钮3-->
-        <li><a href="http://jx.vc8.us/yzmgtv/" target="_blank">芒果视频</a></li><!-- 按钮4-->
-        <li><a href="http://jx.vc8.us/yzbaidu/" target="_blank">百度视频</a></li><!-- 按钮5-->
-        <li><a href="http://jx.vc8.us/yzbilibili/" target="_blank">B站视频</a></li><!-- 按钮6-->
-        <li><a href="http://jx.vc8.us/yzymigu/" target="_blank">咪咕视频</a></li><!-- 按钮7-->
-        <li><a href="http://jx.vc8.us/yzsohu/" target="_blank">搜狐视频</a></li><!-- 按钮8-->
-        <li><a href="http://jx.vc8.us/yzpptv/" target="_blank">PP视频</a></li><!-- 按钮9-->
-        <li><a href="http://jx.vc8.us/yzks/" target="_blank">快手视频</a></li><!-- 按钮10-->
-        <li><a href="http://jx.vc8.us/yzxjj/" target="_blank">抖音视频</a></li><!-- 按钮11-->
-	</ul>
-	</nav></header>
-	<footer id="footer">
-	<p class="copyright">© 2019-2021</p>小盒子<!-- 版权-->
-	</footer>
-</div>
-<div id="bg">
-</div>
-<script src="js/jquery.min.js"></script>
-<script src="js/skel.min.js"></script>
-<script src="js/util.js"></script>
-<script src="js/main.js"></script>
-<script type="text/javascript">document.oncontextmenu=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.onpaste=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.oncopy=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.oncut=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.onselectstart=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}};</script>
-<audio autoplay>
-<source src="http://antiserver.kuwo.cn/anti.s?useless=/resource/&format=mp3&rid=MUSIC_23536340&response=res&type=convert_url&" type="audio/mpeg">
-</audio>
+<canvas class="canvas js-canvas"></canvas>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- 为了加快网页加载的速度下方两个静态文件引用的是我托管在Github的文件，源码文件用也附带了下方文件，如果您不想使用托管的文件可将“https://haycar.hayfuon.icu”去除 -->
+<script type="text/javascript" src="https://haycar.hayfuon.icu/static/layer/layer.js"></script>
+<script type="text/javascript" src="https://haycar.hayfuon.icu/static/js/main.js"></script>
+<script>
+    layer.config({extend: 'haytoycar/style.css'}); /** 设置一个layer弹窗组件的主题 **/
+    var haydata = {
+        layoutcolor: [
+            "#f5883c", //左上角背景颜色(不建议修改)
+            "#ff9043", //左下角背景颜色(不建议修改)
+            "#fccf92", //右上角背景颜色(不建议修改)
+            "#f5aa58", //右下角背景颜色(不建议修改)
+        ],
+        projectlist: [
+            {
+                name: "测试项目", /** 项目名称 **/
+                image: [
+                    "https://haycar.hayfuon.icu/static/images/t01769cd7630f3690cf.jpg", /** 项目图片 **/
+                    "https://haycar.hayfuon.icu/static/images/demo2.jpg"
+                ],
+                floor: "https://haycar.hayfuon.icu/static/images/test.png", /** 地板图，用于显示描述文字与按钮文字 **/
+                button: {
+                    event: "click",  /** 打开的点击事件，urljump:新窗口打开链接/other:执行function函数 **/
+                    href: "javascript:;", /** 需要跳转的链接，只有event变量为urljump时才会执行 **/
+                    function: function(){
+                        /** 需要执行的函数代码，只有event变量不为urljump时才会执行 **/
+                        layer.msg("执行测试");
+                    },
+                    x: -4.8, /** 按钮的x轴位置，根据你图片中的按钮位置跳转 **/
+                    y: -3, /** 按钮的y轴位置，根据你图片中的按钮位置跳转 **/
+                    halfExtents: {
+                        x: 3.2, /** 聚焦按钮时的特效显示的x轴位置 **/
+                        y: 1.5 /** 聚焦按钮时的特效显示的y轴位置 **/
+                    }
+                },
+                distinctions: [{
+                    type: "fwa", /** 一个小的3Dlogo模型 **/
+                    x: 3.95, /** 显示的x轴位置 **/
+                    y: 4.15 /** 显示的y轴位置 **/
+                },
+                {
+                    type: "awwwards",
+                    x: 5.6,
+                    y: 4.15
+                },
+                {
+                    type: "cssda",
+                    x: 6.9,
+                    y: 4.15
+                },
+                {
+                    type: "fwa",
+                    x: 9.1,
+                    y: 4.15
+                }]
+            }
+        ],
+        informationlist: [
+            /** 社交账户 **/
+            {
+                href: "https://qm.qq.com/cgi-bin/qm/qr?k=OjHwz_dJMK8pehuHXjKhavB7-Xea9Xod&noverify=0", /** 链接**/
+                label: "https://haycar.hayfuon.icu/static/images/b9ae4a05b3432b7eaf9b1a7533ff2dcc.png" /** 地板图 **/
+            },
+            {
+                href: "https://xxx/",
+                label: "https://haycar.hayfuon.icu/static/images/7993174ebc2d660febbfda0dd75619b7.png"
+            }
+        ]
+    };
+</script>
 </body>
 </html>
